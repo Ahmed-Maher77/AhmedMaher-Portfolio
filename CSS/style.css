@@ -1,0 +1,110 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+::selection {
+    background-color: #000;
+    color: var(--mainColor);
+}
+@font-face {
+    font-family: a;
+    src: url();
+}
+/* End Global Rules */
+
+/* Start Variables */
+:root {
+    --mainColor: a;
+    scroll-behavior: smooth;
+}
+/* End Variables */
+
+/* Start Components */
+/* .global-class {
+} */
+/* End Components */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+h1 {
+    text-align: center;
+    line-height: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0066ff;
+    margin: 0;
+}
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+    }
+}
+
+/* Large devices (laptops, 992px and up) */
+@media(min-width:992px){
+    .container{
+        width: 970px;
+	}
+}
+
+/* X-Large devices (desktops, 1200px and up) */
+@media(min-width:1200px){
+    .container{
+        width: 1170px;
+	}
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media(min-width:1400px){
+    .container{
+        width: 1370px;
+	}
+}
+
+
+
+/* Start Footer */
+/* footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: #fff;
+    font-size: 0.9rem;
+}
+footer p {
+    margin-bottom: 10px;
+}
+footer p span,
+footer p a {
+    color: var(--main-color);
+    font-weight: bold;
+}
+footer p a {
+    text-decoration: none;
+    transition: 0.3s linear;
+}
+footer p a:hover {
+    color: #0f0
+} */
+/* End Footer */
