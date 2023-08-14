@@ -13,6 +13,16 @@ body {
     background-color: #000;
     color: var(--mainColor);
 }
+::-webkit-scrollbar {
+    width: 0.7rem;
+}
+::-webkit-scrollbar-track {
+    background-color: #dedadca8;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #0066ff;
+    border-radius: 3px;
+}
 @font-face {
     font-family: a;
     src: url();
@@ -27,6 +37,9 @@ body {
 /* End Variables */
 
 /* Start Components */
+a {
+    text-decoration: none;
+}
 /* .global-class {
 } */
 /* End Components */
