@@ -1,0 +1,24 @@
+.MainPicture {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        border: 3px solid transparent;
+        border-left-color: var(--purple-c);
+        border-right-color: var(--purple-c);
+        transform: translateY(-50%);
+        
+        top: calc(-25px / 2);
+        left: calc(-25px / 2);
+        width: calc(100% + 25px);
+        height: calc(100% + 25px);
+
+        border-radius: 50%;
+
+        animation: rotate 10s infinite linear;
+        transform-origin: center center;
+    }
+    &:hover::after {
+        animation-play-state: paused;
+    }
+}

@@ -1,0 +1,8 @@
+@import "../../App.scss";
+
+.Home-Page {
+	padding-bottom: 120px;
+	@include respond-to(md) {
+		padding-bottom: 50px;
+	}
+}

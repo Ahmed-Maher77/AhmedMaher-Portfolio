@@ -1,0 +1,50 @@
+@import "../../App.scss";
+
+
+@mixin bg-color($color) {
+	background-color: $color
+}
+
+.color-mode {
+	@extend %shadow;
+
+	.setting-icon {
+		animation: infite-rotate 3.7s linear infinite;
+	}
+	@keyframes infite-rotate {
+		0% {
+			rotate: 0;
+		}
+		100% {
+			rotate: 360deg;
+		}
+	}
+}
+
+.shareIcon {
+	@extend %shadow;
+}
+
+
+// Colors
+.FloatingIcons {
+	.colors-box {
+		@extend %shadow;
+	}
+}
+.bg-red {
+	@include bg-color(#f93139);
+}
+.bg-orange {
+	@include bg-color(#fd670c);
+}
+.bg-green {
+	@include bg-color(#32a080);
+}
+.bg-blue {
+	@include bg-color(#1152b9);
+}
+.bg-pink {
+	@include bg-color(#f940b4);
+}
+

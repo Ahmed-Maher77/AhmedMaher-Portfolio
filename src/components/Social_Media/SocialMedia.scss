@@ -1,0 +1,50 @@
+@import "../../App.scss";
+
+// ============ Mixin ============ 
+@mixin bg-color($bg-color, $text-color: #fff) {
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+// ============ Social Icons ============ 
+.social-icons {
+    li {
+        a {
+            background-color: #fff;
+            transition: $trans-3;
+
+            & > i {
+                transition: transform 0.3s ease-in-out; // Smooth rotation
+            }
+
+            &:hover {
+                & > i {
+                    transform: rotate(360deg);
+                }
+                & > .social-text {
+                    width: 100px;
+                    padding-inline: 0.5rem;
+                }
+            }
+
+            &.facebook:hover > i {
+                @include bg-color(#1877f2);
+            }
+            &.linkedin:hover > i {
+                @include bg-color(#3e66ad);
+            }
+            &.github:hover > i {
+                @include bg-color(#000000);
+            }
+            &.whatsapp:hover > i {
+                @include bg-color(#59c94f);
+            }
+            &.gmail:hover > i {
+                @include bg-color(#ed4742);
+            }
+            &.telegram:hover > i {
+                @include bg-color(#5b9ae0);
+            }
+        }
+    }
+}

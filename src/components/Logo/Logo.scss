@@ -1,0 +1,16 @@
+.logo-wraper {
+	.logo {
+		a {
+			letter-spacing: 1px;
+			html.dark & {
+				background-color: var(--purple-c);
+			}
+		}
+	}
+	h4 {
+		color: var(--purple-c);
+	}
+	html.dark & h4 {
+		color: #fff;
+	}
+}

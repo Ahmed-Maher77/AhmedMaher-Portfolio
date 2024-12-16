@@ -1,0 +1,194 @@
+/* ========================= Variables ========================= */
+$trans-3: 0.3s;
+// Light Mode:
+:root {
+	--main-bg: #e4e9f7;
+	--nav-bg: #fff;
+	--white-c: #fff;
+	--black-c: #000;
+	--purple-c: hsl(250, 69%, 61%);
+	--purple-bg: hsl(250, 69%, 61%);
+	--gray-c: #5a5858;
+	--gray-c-l: #bdbdbd;
+}
+html.red,
+html.dark.red {
+	--purple-c: #f93139;
+	--purple-bg: #f93139;
+}
+html.pink,
+html.dark.pink {
+	--purple-c: #f940b4;
+	--purple-bg: #f940b4;
+}
+html.orange,
+html.dark.orange {
+	--purple-c: #fd670c;
+	--purple-bg: #fd670c;
+}
+html.green,
+html.dark.green {
+	--purple-c: #32a080;
+	--purple-bg: #32a080;
+}
+html.blue,
+html.dark.blue {
+	--purple-c: #1152b9;
+	--purple-bg: #1152b9;
+}
+// Dark Mode:
+html.dark {
+	--main-bg: #242526;
+	--nav-bg: #131414;
+	--black-c: #ffffff;
+	--white-c: #000000;
+	--purple-c: rgb(140, 120, 240);
+	--purple-bg: hsl(250, 69%, 61%);
+	--gray-c: #ccc;
+	--gray-c-l: #bdbdbd;
+}
+
+/* ========================= Variables for breakpoints ========================= */
+$breakpoints: (
+	sm: 640px,
+	md: 768px,
+	lg: 1024px,
+	xl: 1280px,
+	"2xl": 1536px,
+);
+// Mixin for media queries
+@mixin respond-to($breakpoint) {
+	@media (min-width: map-get($breakpoints, $breakpoint)) {
+		@content;
+	}
+}
+
+/* ========================= Placeholders ========================= */
+%shadow {
+	box-shadow: 0 0 3px 1px rgb(0 0 0 / 19%);
+	html.dark & {
+		box-shadow: 0 0 3px 1px #ffffff47;
+	}
+}
+
+/* ========================= Tailwind Customization ========================= */
+.section-layout {
+	@apply w-full px-7 lg:px-11 py-7 gray-c;
+}
+
+/* ========================= Body ========================= */
+body {
+	background-color: var(--main-bg);
+	font-family: "Poppins", serif;
+	transition: $trans-3;
+}
+::-webkit-scrollbar {
+	width: 6px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: hsl(250, 69%, 61%);
+}
+::-webkit-scrollbar-track {
+	background-color: #ffffff;
+	box-shadow: 0px 0px 2px 1px #b4b4b4 inset;
+}
+
+/* ========================= Reusable Classes ========================= */
+// Colors
+.white-c {
+	color: var(--white-c);
+}
+.black-c {
+	color: var(--black-c);
+}
+.purple-c {
+	color: var(--purple-c);
+}
+.purple-hover {
+	border: 2px solid transparent;
+}
+.purple-hover:hover {
+	border-color: var(--purple-c);
+	color: var(--purple-c);
+	background-color: transparent;
+	transition: $trans-3;
+}
+.purple-outline-hover {
+	border: 2px solid var(--purple-c);
+	color: var(--purple-c);
+	background-color: transparent;
+}
+.purple-outline-hover:hover {
+	color: #fff;
+	background-color: var(--purple-c);
+	transition: $trans-3;
+}
+.gray-c {
+	color: var(--gray-c);
+}
+.gray-bg-l {
+	background-color: var(--gray-c-l);
+}
+.gray-bg-l_hover:hover {
+	background-color: var(--gray-c);
+	transition: $trans-3;
+}
+.main-bg {
+	background-color: var(--main-bg);
+}
+.white-bg {
+	background-color: var(--white-c);
+}
+.nav-bg {
+	background-color: var(--nav-bg);
+}
+.purple-bg {
+	background-color: var(--purple-bg);
+}
+.purple-bg-hover:hover {
+	background-color: hsla(250, 69%, 61%, 0.734);
+	transition: $trans-3;
+}
+
+// Transition
+.trans-3 {
+	transition: 0.3s;
+}
+
+// Animations
+.animated-arrow:hover i {
+	animation: move-arrow 0.5s infinite alternate;
+}
+@keyframes move-arrow {
+	0% {
+		translate: 0;
+	}
+	100% {
+		translate: 5px;
+	}
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// Shadows
+.shadow {
+	@extend %shadow;
+}
+
+// Fonts
+.ibm-plex-mono {
+	font-family: "IBM Plex Mono", serif;
+}
+
+// border
+// .border-purple {
+// 	border: 2px solid var(--purple-c);
+// }
+
+/* ========================= Shared Styles =========================  */

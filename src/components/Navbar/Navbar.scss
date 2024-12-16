@@ -1,0 +1,12 @@
+@import "../../App.scss";
+
+nav.navbar {
+	z-index: 999;
+	a {
+		border-radius: 5px;
+		background-color: var(--purple-c);
+	}
+	.bx-menu:hover {
+		color: var(--purple-c);
+	}
+}
