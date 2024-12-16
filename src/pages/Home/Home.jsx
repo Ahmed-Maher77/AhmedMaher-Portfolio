@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Home.scss";
-import SocialMedia from "../../components/Social_Media/socialMedia";
+import SocialMedia from "../../components/Social_Media/SocialMedia.jsx";
 import MainPicture from "../../components/Main_Picture/MainPicture";
 import AnimatedTitles from "../../components/Animated_Titles/AnimatedTitles";
 import HomeButtons from "../../components/Home_Buttons/HomeButtons";
