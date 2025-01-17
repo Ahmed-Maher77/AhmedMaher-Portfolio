@@ -1,0 +1,84 @@
+@import "../../App.scss";
+
+%gradientText {
+	background: linear-gradient(90deg, var(--purple-c), var(--purple-c));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.Section-Heading {
+	position: sticky;
+	top: 8px;
+	z-index: 998;
+	transition: $trans-3;
+	&.scroll {
+		background-color: rgba(0, 0, 0, 0.197);
+		padding-block: 5px;
+		
+		// width: 80%;
+		width: 380px;
+		border-radius: 50px;
+		margin-inline: auto;
+		backdrop-filter: blur(5px);
+		color: #fff;
+		div .main-head {
+			font-size: 1.5rem;
+			// background: linear-gradient(90deg, #fff, #fff);
+			// -webkit-background-clip: text;
+			// -webkit-text-fill-color: transparent;
+		}
+		.lines span {
+			background-color: #fff;
+		}
+	}
+	& > div {
+		position: relative;
+		width: fit-content;
+		margin-inline: auto;
+		.main-head {
+			@apply text-3xl xl:text-4xl font-bold text-center w-fit;
+			background: linear-gradient(90deg, #ff5733, #0077ff);
+    		-webkit-background-clip: text;
+    		-webkit-text-fill-color: transparent;
+			transition: $trans-3;
+		}
+		.lines {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			display: flex;
+			flex-direction: column;
+			row-gap: 6px;
+			&.before-lines {
+				left: -65px;
+				align-items: flex-end;
+			}
+			&.after-lines {
+				right: -65px;
+			}
+			span {
+				width: 10px;
+				height: 3px;
+				background-color: var(--gray-c);
+				display: block;
+				&:nth-of-type(2) {
+					width: 30px;
+				}
+				&:nth-of-type(3) {
+					width: 40px;
+				}
+				transition: $trans-3;
+			}
+		}
+		&:hover {
+			.main-head {
+				@extend %gradientText;
+			}
+			.lines {
+				span {
+					background-color: var(--purple-c);
+				}
+			}
+		}
+	}
+}

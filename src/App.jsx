@@ -1,11 +1,11 @@
 import "./App.scss";
 import { useContext, useEffect, useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar.jsx";
+import Navbar from "./common/Navbar/Navbar.jsx";
 import Loader from "./components/Loader/Loader";
 import Home from "./pages/Home/Home.jsx";
-import Overlay from "./components/Overlay/Overlay.jsx";
-import Sidebar from "./components/Sidebar/Sidebar.jsx";
+import Overlay from "./common/Overlay/Overlay.jsx";
+import Sidebar from "./common/Sidebar/Sidebar.jsx";
 import { DarkModeContext } from "./contexts/DarkModeContext.jsx";
 import { SidebarContext } from "./contexts/SidebarContext.jsx";
 import FloatingIcons from "./components/Controlling_Icons/FloatingIcons.jsx";

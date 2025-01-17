@@ -77,14 +77,14 @@ const Sidebar = () => {
 	return (
 		<ul
 			ref={sidebarRef}
-			className={`sidebar font-medium fixed lg:sticky lg:top-0 top-0 left-0 nav-bg h-svh w-[237px] lg:max-w-[237px] lg:min-w-[237px] text-[1rem] flex ${
+			className={`sidebar font-medium fixed lg:sticky lg:top-0 top-0 left-0 nav-bg h-screen w-[237px] lg:max-w-[237px] lg:min-w-[237px] text-[1rem] flex ${
 				!activeBar && "left-[-350px]"
 			} trans-3 ${compressSidebar && "lg:w-[80px] lg:min-w-[80px] lg:max-w-[80px]"}`}
 		>
 			<div className="wrapper h-full w-full p-[12px] flex flex-col justify-between overflow-y-auto">
 
 			
-			<div className="w-full  flex flex-col gap-2  nav-bg">
+			<div className="w-full flex flex-col gap-2  nav-bg">
 				{/* =============== Header =============== */}
 				<li className="mb-12 flex justify-between">
 					<Logo compressSidebar={compressSidebar} />

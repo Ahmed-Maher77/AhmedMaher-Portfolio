@@ -1,7 +1,7 @@
 import Logo from "../Logo/Logo.jsx";
 import "./Navbar.scss";
 import { useContext } from "react";
-import ChangeModeIcon from "../Controlling_Icons/ChangeModeIcon.jsx";
+import ChangeModeIcon from "../../components/Controlling_Icons/ChangeModeIcon.jsx";
 import { SidebarContext } from "../../contexts/SidebarContext.jsx";
 
 const Navbar = () => {

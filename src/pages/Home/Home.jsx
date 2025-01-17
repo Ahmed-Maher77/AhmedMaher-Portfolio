@@ -16,7 +16,7 @@ const Home = () => {
 	}, [])
 
 	return (
-		<div className={`Home-Page section-layout flex ${XLScreen && "items-center min-h-screen"} overflow-hidden`} style={{paddingTop: "50px", paddingInline: XLScreen && "80px"}}>
+		<div className={`Home-Page section-layout mb-12 flex ${XLScreen && "items-center min-h-screen"} overflow-hidden`} style={{paddingTop: "50px", paddingInline: XLScreen && "80px"}}>
 			<div className={`w-full flex ${XLScreen? "flex-row-reverse justify-between" : "flex-col"} gap-y-5 items-center`}>
 			{XLScreen || <MainHeading />}
 			<MainPicture XLScreen={XLScreen} margin="me-3" />

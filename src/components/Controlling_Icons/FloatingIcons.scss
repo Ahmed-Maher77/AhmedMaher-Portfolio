@@ -28,6 +28,7 @@
 
 // Colors
 .FloatingIcons {
+	z-index: 9999;
 	.colors-box {
 		@extend %shadow;
 	}

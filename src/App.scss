@@ -74,6 +74,7 @@ $breakpoints: (
 /* ========================= Tailwind Customization ========================= */
 .section-layout {
 	@apply w-full px-7 lg:px-11 py-7 gray-c;
+	// position: relative;
 }
 
 /* ========================= Body ========================= */
@@ -185,6 +186,8 @@ body {
 .ibm-plex-mono {
 	font-family: "IBM Plex Mono", serif;
 }
+
+
 
 // border
 // .border-purple {

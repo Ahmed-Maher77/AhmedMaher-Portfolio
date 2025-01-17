@@ -18,7 +18,12 @@
         animation: rotate 10s infinite linear;
         transform-origin: center center;
     }
+    &:hover {
+        outline-color: var(--gray-c);
+    }
     &:hover::after {
         animation-play-state: paused;
+        border-left-color: var(--gray-c);
+        border-right-color: var(--gray-c);
     }
 }
